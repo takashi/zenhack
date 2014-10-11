@@ -1,0 +1,14 @@
+hello
+<span id="count"><%= count %></span>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var count = document.getElementById('count');
+  var socket = io('http://128.199.136.176:3000');
+  socket.on('connect', function(){
+    socket.on('count', function(data){
+      console.log(count);
+      count.innerText = data;
+    });
+    socket.on('disconnect', function(){});
+  });
+</script>

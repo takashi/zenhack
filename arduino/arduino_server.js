@@ -17,7 +17,7 @@ button.on('down', function(){
  * UP
  */
 button.on('up', function(){
-  post({url: 'http://hoge.com'}  function (error, response, body) {
+  post({url: 'http://128.199.136.176:8080/count_up'},  function (error, response, body) {
     if (!error && response.statusCode == 200) {
       console.log(response.statusCode) // Print the google web page.
     }else{
