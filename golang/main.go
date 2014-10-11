@@ -16,7 +16,7 @@ func main() {
 		panic(err)
 	}
 
-	count := 0
+	count := 852
 
 	http.HandleFunc("/count", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "%d", count)
