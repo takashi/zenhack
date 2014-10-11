@@ -3,7 +3,7 @@ hello
 <script src="/socket.io/socket.io.js"></script>
 <script>
   var count = document.getElementById('count');
-  var socket = io('http://localhost:3000');
+  var socket = io('http://128.199.136.176:3000');
   socket.on('connect', function(){
     socket.on('count', function(data){
       console.log(count);
