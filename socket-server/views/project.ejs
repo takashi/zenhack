@@ -1,10 +1,13 @@
 hello
+<span id="count"></span>
 <script src="/socket.io/socket.io.js"></script>
 <script>
+  var count = document.getElementById('count');
   var socket = io('http://localhost:3000');
   socket.on('connect', function(){
     socket.on('count', function(data){
-      console.log(data);
+      console.log(count);
+      count.innerText = data;
     });
     socket.on('disconnect', function(){});
   });
