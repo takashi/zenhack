@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/garyburd/redigo/redis"
@@ -16,10 +18,14 @@ func main() {
 
 	count := 0
 
+	http.HandleFunc("/count", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "%d", count)
+	})
+
 	http.HandleFunc("/count_up", func(w http.ResponseWriter, r *http.Request) {
 		count++
 		c.Do("PUBLISH", ch, count)
 	})
 
-	http.ListenAndServe(":8080", nil)
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
