@@ -7,6 +7,8 @@
 <script type="text/javascript" href="/js/bootstrap.min.js"></script>
 </head>
 <body>
-<i class="fa fa-line-chart"></i>
+<div class="page-header">
+  <h1>Zen is zen <small>@kamakura</small></h1>
+</div>
 </body>
 </html>
