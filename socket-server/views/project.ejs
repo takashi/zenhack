@@ -1,0 +1,11 @@
+hello
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io('http://localhost:3000');
+  socket.on('connect', function(){
+    socket.on('count', function(data){
+      console.log(data);
+    });
+    socket.on('disconnect', function(){});
+  });
+</script>
