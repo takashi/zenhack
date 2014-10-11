@@ -1,0 +1,17 @@
+{
+  "name": "arduino_server",
+  "version": "0.0.0",
+  "description": "zenhack!",
+  "main": "auduino_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "duino": "*",
+    "co": "3.1.0",
+    "thunkify": "2.1.2",
+    "request": "~>2.45"
+  }
+}
