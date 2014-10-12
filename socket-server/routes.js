@@ -13,4 +13,10 @@ router.get('/project', function(req, res) {
   })
 });
 
+router.get('/shonan', function(req, res) {
+  request('http://localhost:8080/count', function (error, response, body) {
+    res.render('shonan', { title: 'Express', count: +body + 612 });
+  })
+});
+
 module.exports = router;
