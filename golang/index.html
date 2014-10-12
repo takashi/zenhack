@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>coupling admin</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">TRUSH FUNDING</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <br />
+            <btn class="btn btn-default btn-lg" onclick="countUp()">ゴミを捨てる</btn>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+     function countUp() {
+       $.ajax({
+         type: "GET",
+         url: "http://128.199.136.176:8080/count_up"
+       });
+     }
+    </script>
+  </body>
+</html>
