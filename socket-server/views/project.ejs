@@ -1,14 +1,114 @@
-hello
-<span id="count"><%= count %></span>
-<script src="/socket.io/socket.io.js"></script>
-<script>
-  var count = document.getElementById('count');
-  var socket = io('http://128.199.136.176:3000');
-  socket.on('connect', function(){
-    socket.on('count', function(data){
-      console.log(count);
-      count.innerText = data;
-    });
-    socket.on('disconnect', function(){});
-  });
-</script>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Zen-hack</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <script type="text/javascript" href="/javascripts/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="page-header" style="margin:0 0 20px;">
+        <img src="/images/pc/logo.png">
+        <img src="/images/pc/search.png" style="margin-left: 30px;">
+        <span style="float:right;font-weight:bold;margin:20px 15px 15px 15px;font-size:16px;">login</span>
+      </div>
+
+      <div class="content">
+        <h1 class="title" style="margin: 40px 0;">ペットボトル1000本集めて、新入学生にランドセルを配る！</h1>
+        <div style="text-align:center;margin:10px;">
+          <img src="/images/takashi.jpg" style="border-radius:60px;width:60px;">
+          <p style="margin-bottom: 24px;"><span>projected by<br><strong><a href="">鎌倉市立今泉小学校</a></strong></span></p>
+          <div style="display:block;">
+            <div style="position:relative; width: 60%; margin: 0 auto;">
+              <img src="/images/randosel.jpg" width="100%" style="border-radius:10px;">
+              <div style="position:absolute; bottom:0px; font-size:62px;color:white; width: 100%; background-color: rgba(135, 206, 235, 0.69);">
+                <p style="margin:10px 30px 10px 0; float:right;"><strong id="count"><%= count %></strong> / 1000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+         <section class="content-left">
+          <p>
+            <img src="/images/pc/about.png">
+            <span style="font-weight:bold;font-size:18px;margin-left:5px;vertical-align:middle;">このプロジェクトについて</span>
+          </p>
+          <div style="background-color:white;padding:15px 20px;border-radius:10px;">
+            <h3 style="margin-top:10px;margin-bottom:20px;">ランドセルを配りたい</h3>
+            <p style="line-height:1.8;">
+              私達は、鎌倉市立今泉小学校PTAです。<br>
+              毎年、数十名の新入生が入ってきますが、その新入生に向けて、ランドセルをこのプロジェクトで贈りたいと思っています。
+            </p>
+            <p style="line-height:1.8;">
+              鎌倉私立今泉小学校の学区の家庭で出たペットボトルを分別して、リサイクルしてランドセルを購入します。
+            </p>
+            <p style="margin:20px 0;">
+              <img src="/images/PTA.jpg">
+            </p>
+            <p style="line-height:1.8;">
+              地域のみんなで目標達成したいと思っています。<br>
+              応援をどうぞよろしくお願いします。
+            </p>
+          </div>
+        </section>
+        <section class="sidebar">
+          <p>
+            <img src="/images/pc/people.png">
+            <span style="font-weight:bold;font-size:18px;vertical-align:middle;">サポーター</span>
+            <span style="margin-left:100px;font-weight:bold;font-size:16px;vertical-align:middle; float:right; margin-right: 70px;">1200</span>
+          </p>
+          <div style="padding:15px 0;margin-right:65px;">
+            <img src="/images/ito.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin2.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin3.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin4.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin5.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin7.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin8.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin9.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/takashi.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/ito.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin2.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin3.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin4.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin5.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin7.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin8.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin9.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/takashi.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/ito.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin2.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin3.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin4.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin5.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin7.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin8.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/shasin9.jpg" width="50px;" style="border:1px solid #B9BABD;">
+            <img src="/images/takashi.jpg" width="50px;" style="border:1px solid #B9BABD;">
+
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var count = document.getElementById('count');
+      var socket = io('http://localhost:3000');
+      socket.on('connect', function(){
+        socket.on('count', function(data){
+          console.log(count);
+          count.innerText = data;
+        });
+        socket.on('disconnect', function(){});
+      });
+    </script>
+  </body>
+</html>
+

@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/project', function(req, res) {
-  request('http://128.199.136.176:8080/count', function (error, response, body) {
+  request('http://localhost:8080/count', function (error, response, body) {
     res.render('project', { title: 'Express', count: body });
   })
 });
