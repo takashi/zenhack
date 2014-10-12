@@ -3,7 +3,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var redis = require("redis");
 
-var redisClient = redis.createClient(6379, '128.199.136.176');
+var redisClient = redis.createClient(/*6379, '128.199.136.176'*/);
 
 module.exports = function() {
   http.listen(app.get('port'), function() {

@@ -1,8 +1,31 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'PTF-NORDIC-Rnd.ttf';
+  background-color: rgba(240, 241, 244, 0.29);
 }
 
-a {
-  color: #00B7FF;
+.wrapper {
+  margin:10px 25px;
+}
+
+.content {
+  margin-top:10px;
+}
+
+.title {
+  margin:0 15px;
+  text-align: center;
+}
+
+.content-left {
+  margin-top:30px;
+  padding-left: 35px;
+  float: left;
+  width:55%;
+}
+
+.sidebar {
+  margin-top: 30px;
+  
+  float: right;
+  width: 40%;
 }
