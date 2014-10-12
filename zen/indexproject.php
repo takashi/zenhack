@@ -18,7 +18,7 @@
 
 <div class="wrapper">
   <div class="content">
-    <h1 class="title">ペットボトル1000本集めて、<br>新入学生にランドセルを配る！</h1>
+    <h1 class="title">ペットボトル300本集めて、<br>新入学生にランドセルを配る！</h1>
     <div style="text-align:center;margin:10px;">
       <img src="/zenhack/zen/img/takashi.jpg" style="border-radius:60px;width:60px;">
       <p><span>projected by<br><strong><a href="">鎌倉市立今泉小学校</a></strong></span></p>
@@ -54,9 +54,9 @@
       <p>
         <img src="/zenhack/zen/img/pc/people.png">
         <span style="font-weight:bold;font-size:18px;vertical-align:middle;">サポーター</span>
-        <span style="margin-left:100px;font-weight:bold;font-size:16px;vertical-align:middle;">1200</span>
+        <span style="float:right; margin-right:70px;font-weight:bold;font-size:16px;vertical-align:middle;">1200</span>
       </p>
-      <div style="padding:15px 0;margin-right:65px;">
+      <div style="padding:15px 0;margin-right:35px;">
         <img src="/zenhack/zen/img/ito.jpg" width="50px;" style="border:1px solid #B9BABD;">
         <img src="/zenhack/zen/img/shasin.jpg" width="50px;" style="border:1px solid #B9BABD;">
         <img src="/zenhack/zen/img/shasin2.jpg" width="50px;" style="border:1px solid #B9BABD;">
